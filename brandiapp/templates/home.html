@@ -1,1 +1,30 @@
-<h1>hello world</h1>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 라이프 쇼핑앱 - 브랜디 {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+    <div class="event_banner">
+        <img src="{% static 'img/eventBanner.png' %}" alt="이벤트 배너 이미지" id="event_img">
+    </div>
+
+    <div class="mainSpace">
+        <div class="leftSpace"></div>
+        <div class="product_list">
+            <h2>오늘은 이 상품 어때요?</h2>
+            
+            {%for a in products%}
+            <div class="product_thumb">
+                <p><img src="{{ a.thumbnail.url }}" alt="상품 썸네일 이미지"/></p>
+                <em>{{a.product_name}}</em>
+                <em>{{a.price}}</em>
+                <a href="{%url 'detail' a.id %}">자세히 보기</a>
+            </div>
+            {%endfor%}
+        </div>
+    
+        <div class="rightSpace"></div>
+    </div>
+    
+{% endblock %}

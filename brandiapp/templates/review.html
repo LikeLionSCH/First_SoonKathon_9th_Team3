@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} 리뷰 화면 {% endblock %}
+{% block link %} {% static 'css/review.css' %} {% endblock %}
+{% block content %}
+    <p class="review_title">리뷰</p>
+    <hr>
+
+{% for a in reviews %}
+    <div class="review_box">
+        <span class="review_author">작성자 : {{a.author}}</span>
+        <span class="review_created_at">작성일시 : {{a.created_at}}</span>
+        <span class="review_content" width="300px" height="100px">내용 : {{a.content}}</span>
+        <span class="bodystyle">{{a.body}}</span>
+        <span><img width="150px" height="150px" src="{{a.review_image.url}}" alt="안나와요"/></span>
+    </div>
+    <hr>
+{% endfor %}
+
+{% endblock %}

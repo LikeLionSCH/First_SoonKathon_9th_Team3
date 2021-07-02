@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} 디테일 화면 {% endblock %}
+{% block link %} {% static 'css/detail.css' %}{% endblock %} 
+{% block content %}
+<div id="content">
+    {% if product.thumbnail %}
+    <div class="thumbnail">
+        <img src="{{ product.thumbnail.url }}" width="200" height="200 "alt="안나와요">
+    </div>
+    {% endif %}
+    <div class="detail_info">
+        <h3>{{product.product_name}}</h3>
+        <!-- <p>{{a.explanation}}</p> -->
+        <h3><span id="sale">50%</span>&nbsp;&nbsp;{{product.price}}원</h3>
+        <hr>
+        <div class="delivery">
+            <span>배송정보</span>
+            <span><strong>일반배송</strong></span>
+        </div>
+        <hr>
+        <div class="genuine">
+            <span>정품인증</span>
+            <span>브랜디 모든 상품은 100% 정품입니다.</span>
+        </div>
+        <hr>
+        <!-- <p>{{product.OPTION}}</p> -->
+        <div class="button">
+            <button>바로 구매</button>
+            <button>NPAY 구매</button>
+        </div>
+        <br>
+        <br>
+        <div class="edit">
+            <a href="{% url 'update' product.id %}"><input type="button" value="수정하기"></a>
+            <a href="{% url 'delete' product.id %}"><input type="button" value="삭제하기"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

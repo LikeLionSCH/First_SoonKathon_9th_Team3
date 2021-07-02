@@ -1,0 +1,11 @@
+#mainLogo {
+    width: 200px;
+}
+
+#searchImg, #createImg, #cartImg, #heartImg, #userImg{
+    width: 50px;
+}
+
+footer {
+    background-color: #f7f8fa;
+}
