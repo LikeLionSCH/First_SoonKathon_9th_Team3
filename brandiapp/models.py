@@ -28,7 +28,7 @@ class Review(models.Model):
     # 작성자
     author = models.CharField(max_length=100),
     # 내용
-    content = models.CharField(max_length=200, null=True),
+    content = models.TextField(),
     # 작성 날짜
     created_at = models.DateField(auto_now_add=True),
     # 수정 날짜
