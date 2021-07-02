@@ -1,0 +1,25 @@
+@import
+url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+body {
+  font-family: "Noto Sans KR", sans-serif !important;
+}
+.mainSpace {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftSpace, .rightSpace {
+    width: 20%;
+    height: 100%;
+}
+
+.product_list {
+    margin-left: 200px;
+    width: 60%;
+    height: 100%;
+}
+
+.project_thumb {
+    width: 20%;
+    height: 30%;
+}

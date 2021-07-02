@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %} 상품 만들기 {% endblock %} 
+{% block link %} {% static 'css/new.css' %}{% endblock %} 
+{% block content %}
+<h1>상품 만들기</h1>
+<form action="{% url 'product' %}" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <p>썸네일 이미지 : <input type="file" name="thumbnail" /></p>
+  <p>디테일 이미지 : <input type="file" name="detail_image" /></p>
+  <p>상품명 : <input type="text" name="product_name" /></p>
+  <p>상세 설명 : <textarea name="explanation" cols="30" row="10"></textarea></p>
+  <p>가격 : <input type="number" name="price" /></p>
+  <!-- <p>가격 : <input type="number" name="price" /></p> -->
+  <button type="submit">submit</button>
+</form>
+{% endblock %}

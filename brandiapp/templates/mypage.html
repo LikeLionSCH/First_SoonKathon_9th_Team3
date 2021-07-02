@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 마이페이지 - 브랜디 {% endblock %}
+{% block link %} {% static 'css/mypage.css' %} {% endblock %}
+{% block content %}
+
+    <div id="mypage_title">
+        <h1>마이페이지</h1>
+    </div>
+
+    <div class="mypage_iconbox">
+        <div class="mypage_icon">
+            <img src="img/order.svg" alt="주문 및 배송조회 아이콘 이미지" id="order_img">
+            <span class="mypage_span">
+                주문/배송조회
+            </span>
+        </div>
+
+        <div class="mypage_icon">
+            <img src="img/order.svg" alt="주문 및 배송조회 아이콘 이미지" id="order_img">
+            <span class="mypage_span">
+                포인트
+            </span>
+        </div>
+
+        <div class="mypage_icon">
+            <img src="img/order.svg" alt="주문 및 배송조회 아이콘 이미지" id="order_img">
+            <span class="mypage_span">
+                쿠폰
+            </span>
+        </div>
+
+        <div class="mypage_icon">
+            <img src="img/order.svg" alt="주문 및 배송조회 아이콘 이미지" id="order_img">
+            <span class="mypage_span">
+                Q & A
+            </span>
+        </div>
+
+        <div class="mypage_icon">
+            <img src="img/order.svg" alt="주문 및 배송조회 아이콘 이미지" id="order_img">
+            <span class="mypage_span">
+                FAQ
+            </span>
+        </div>
+    </div>
+
+    <div id="mypage_body">
+        <p>주문한 상품이 없습니다.</p>
+    </div>
+
+{% endblock %}
