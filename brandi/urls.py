@@ -21,4 +21,5 @@ from brandiapp import views as b
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', b.home, name='home'),
+    path('review/', b.review, name='review'),
 ]

@@ -1,0 +1,13 @@
+{% for a in reviews %}
+<div>
+    <h4>{{ a.author }}</h4>
+    <h4>{{ a.created_at }}</h4>
+    <h4>{{ a.updated_at }}</h4>
+    <h4>{{ a.rate }}</h4>
+    <hr>
+    {% if a.image %}
+    <p><img width="200px" height="200px" src="{{ brandi.image.url }}" alt="안나와요"/></p>
+    {% endif %}
+    <p>{{ brandi.content }}</p>
+</div>
+{% endfor %}
